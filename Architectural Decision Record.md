@@ -27,7 +27,10 @@ The project requires a system capable of processing dense, table-heavy financial
 ### 5. Persistent Standalone Vector DB (ChromaDB)
 *   **Decision:** Run ChromaDB as a dedicated service rather than an in-memory library.
 *   **Rationale:** Decouples the data storage from the application lifecycle, allowing for database updates without restarting the entire system.
-
+  
+### 6. APIs to extract SEC filings(US) and Annual Reports(IND)
+*  **Decision:** We will prioritize direct HTM-to-Markdown conversion for SEC filings.
+*  **Rationale:** Minimizes data loss for US markets while maintaining compatibility
 ## Consequences
 *   **Pros:** High control over data privacy; professional-grade observability; zero per-token costs for local testing.
 *   **Cons:** Higher initial hardware requirements (RAM/GPU); steeper learning curve for Airflow orchestration.
